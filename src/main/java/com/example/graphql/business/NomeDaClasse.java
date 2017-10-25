@@ -23,11 +23,12 @@ public class NomeDaClasse {
 	public static void main(String[] args) {
    // System.out.println(business.list());
    try{
-      System.out.println(userBusiness.list());
+     userBusiness.list();
+      System.out.println("Valor ="+userBusiness.list());
    }catch( Exception e){
-     System.out.println(e.getMessage());
+     System.out.println("Erro "+e.getMessage());
    }
- 
+// System.out.println("Valor ="+userBusiness.list());
 	}
 	
 	

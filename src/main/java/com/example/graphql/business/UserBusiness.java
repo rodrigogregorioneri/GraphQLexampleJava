@@ -2,7 +2,6 @@ package com.example.graphql.business;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -29,8 +28,9 @@ public class UserBusiness {
 
 
 
-  public List<User> list(){
+  public List<User> list() throws Exception{
     List<User> result = repository.list();
+    System.out.println("entrou");
     return result;
   }
 
