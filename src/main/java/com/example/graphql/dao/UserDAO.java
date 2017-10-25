@@ -1,6 +1,8 @@
 package com.example.graphql.dao;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +24,8 @@ import com.example.graphql.entity.User;
 @Transactional(transactionManager="app-TransactionManager") 
 public interface UserDAO extends JpaRepository<User, java.lang.String> {
 
+@Query("select u from User u")
+public Page<User> list();
 
 
 }
