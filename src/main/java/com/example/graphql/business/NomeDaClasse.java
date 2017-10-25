@@ -13,12 +13,25 @@ import org.springframework.beans.factory.annotation.Qualifier;
  */
 
 public class NomeDaClasse {
-	@Autowired
-	@Qualifier("UserBusiness")
-	protected UserBusiness business;
+  
+  
+  @Autowired
+  @Qualifier("UserBusiness")
+  private static UserBusiness userBusiness;
 	
 
 	public static void main(String[] args) {
    // System.out.println(business.list());
+   try{
+      System.out.println(userBusiness.list());
+   }catch( Exception e){
+     System.out.println(e.getMessage());
+   }
+ 
 	}
+	
+	
+
+	
+	
 }
