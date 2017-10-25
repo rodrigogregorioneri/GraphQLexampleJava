@@ -1,6 +1,7 @@
 package com.example.graphql.dao;
 
-import org.springframework.data.domain.Page;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -25,7 +26,7 @@ import com.example.graphql.entity.User;
 public interface UserDAO extends JpaRepository<User, java.lang.String> {
 
 @Query("select u from User u")
-public Page<User> list();
+public List<User> list();
 
 
 }
